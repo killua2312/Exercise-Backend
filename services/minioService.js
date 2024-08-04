@@ -2,7 +2,7 @@ const Minio = require("minio");
 require("dotenv").config();
 
 const minioClient = new Minio.Client({
-  endPoint: process.env.HOST_LOCALHOST,
+  endPoint: process.env.MIN_ENDPOINT,
   port: parseInt(process.env.PORT),
   useSSL: false,
   accessKey: process.env.MIN_ACCESS,

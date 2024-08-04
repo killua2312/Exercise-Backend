@@ -5,7 +5,7 @@ const exerciseRoutes = require("./routes/exerciseRoutes");
 const cors = require("cors");
 
 const app = express();
-const port = parseInt(process.env.EXPRESS_PORT) || 3002;
+const port = parseInt(process.env.EXPRESS_PORT);
 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
