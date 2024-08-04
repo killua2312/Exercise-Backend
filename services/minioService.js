@@ -22,6 +22,7 @@ minioClient.bucketExists(bucketName, (err) => {
 const getPresignedUrl = async (gif_id) => {
   return await new Promise((res, rej) => {
     const filename = `Exercises/${gif_id}.gif`;
+    console.log(process.env.MIN_ENDPOINT, process.env.MIN_PORT);
     minioClient.presignedGetObject(bucketName, filename, (err, url) => {
       if (err) rej(err);
       else res(url);
