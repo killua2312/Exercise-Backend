@@ -1,0 +1,7 @@
+docker-compose.yml filter=git-crypt diff=git-crypt
+Dockerfile filter=git-crypt diff=git-crypt
+init-db.sh filter=git-crypt diff=git-crypt
+scripts/bulkInsertScript.js filter=git-crypt diff=git-crypt
+scripts/exercises_with_difficulty_no_gifUrl.json filter=git-crypt diff=git-crypt
+services/bulkInsertService.js filter=git-crypt diff=git-crypt
+config/config.json filter=git-crypt diff=git-crypt
