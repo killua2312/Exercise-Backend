@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 const port = parseInt(process.env.EXPRESS_PORT);
 
-const allowedOrigin = "https://aquamarine-stardust-a0b586.netlify.app/";
+const allowedOrigin = "https://aquamarine-stardust-a0b586.netlify.app";
 const corsOptions = {
   origin: allowedOrigin,
   optionsSuccessStatus: 200,
