@@ -22,10 +22,15 @@ minioClient.bucketExists(bucketName, (err) => {
 const getPresignedUrl = async (gif_id) => {
   return await new Promise((res, rej) => {
     const filename = `Exercises/${gif_id}.gif`;
-    minioClient.presignedGetObject(bucketName, filename, (err, url) => {
-      if (err) rej(err);
-      else res(url);
-    });
+    minioClient.presignedGetObject(
+      bucketName,
+      filename,
+      10 * 60,
+      (err, url) => {
+        if (err) rej(err);
+        else res(url);
+      },
+    );
   });
 };
 
