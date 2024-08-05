@@ -24,26 +24,26 @@ router.get("/bodyweight", async (req, res) => {
   }
 });
 
-router.get("/filteredExercises", async (req, res) => {
-  try {
-    const filters = {
-      bodyPart: req.query.bodyPart,
-      target: req.query.target,
-      difficulty: req.query.difficulty,
-    };
+// router.get("/filteredExercises", async (req, res) => {
+//   try {
+//     const filters = {
+//       bodyPart: req.query.bodyPart,
+//       target: req.query.target,
+//       difficulty: req.query.difficulty,
+//     };
 
-    const exercises = await filterExercises(filters);
+//     const exercises = await filterExercises(filters);
 
-    const exercisesWithUrls = await Promise.all(
-      exercises.map(async (exercise) => {
-        const presignedUrl = await getPresignedUrl(exercise.gif_id);
-        return { ...exercise.toJSON(), gifurl: presignedUrl };
-      }),
-    );
-    res.send(exercisesWithUrls);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
+//     const exercisesWithUrls = await Promise.all(
+//       exercises.map(async (exercise) => {
+//         const presignedUrl = await getPresignedUrl(exercise.gif_id);
+//         return { ...exercise.toJSON(), gifurl: presignedUrl };
+//       }),
+//     );
+//     res.send(exercisesWithUrls);
+//   } catch (error) {
+//     res.status(500).send(error);
+//   }
+// });
 
 module.exports = router;
