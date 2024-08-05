@@ -24,7 +24,6 @@ const createRateLimiter = (windowMs, max) => {
     windowMs,
     max,
     message: { error: "Too many requests, please try again later." },
-    keyGenerator: (req) => req.apiKey,
   });
 };
 
