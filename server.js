@@ -5,6 +5,7 @@ const slowDown = require("express-slow-down");
 const { sequelize } = require("./models");
 const exerciseRoutes = require("./routes/exerciseRoutes");
 const cors = require("cors");
+const compression = require("compression");
 
 const app = express();
 const port = parseInt(process.env.EXPRESS_PORT);
@@ -32,6 +33,8 @@ const speedLimiter = slowDown({
   delayAfter: 50,
   delayMs: 1000,
 });
+
+app.use(compression());
 
 app.use(
   "/api",
