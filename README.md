@@ -12,62 +12,60 @@ utlizies **Docker** for containerization and **git-crypt** for secure file encry
 
 ## 🛠️ Tech Stack
 
-  - **Backend Frameworks**: Express.js
-  - **Database**: PostgreSQL
-  - **ORM**: Sequelize
-  - **Object Storage**: Minio(for GIF storage)
-  - **Containerization**: Docker
-  - **Secret Management**: git-crypt
+- **Backend Frameworks**: Express.js
+- **Database**: PostgreSQL
+- **ORM**: Sequelize
+- **Object Storage**: Minio(for GIF storage)
+- **Containerization**: Docker
+- **Secret Management**: git-crypt
 
 ## ✨ Features
 
-  - Custom Minio integration for efficient GIF storage and retrieval
-  - RESTful API design
-  - Data persistence with PostgreSQL, managed through Sequelize ORM
-  - Dockerized application for easy deployment and scalability
-  - Secure file encryption using git-crypt for sensitive configuration
+- Custom Minio integration for efficient GIF storage and retrieval
+- RESTful API design
+- Data persistence with PostgreSQL, managed through Sequelize ORM
+- Dockerized application for easy deployment and scalability
+- Secure file encryption using git-crypt for sensitive configuration
 
 ## 📊 API Endpoint
 
 Currently, there is one route available:
 
-  - ```GET /api/bodyweight ```: Retrieves a list of body weight exercises with their GIF url
+- `GET /api/bodyweight `: Retrieves a list of body weight exercises with their GIF url
 
 ## Data Structure
 
 Each exercise entry includes:
 
-  - Exercise name
-  - GIF url (for visual demonstration)
-  - Equipment used
-  - Primary muscles
-  - Secondary muscles
-  - difficulty
+- Exercise name
+- GIF url (for visual demonstration)
+- Equipment used
+- Primary muscles
+- Secondary muscles
+- difficulty
 
 ## 🚫 Usage Restrictions
 
-  - This API is running in a production environment but is not for public use
-  - Frontend access is restricted due to CORS origin rules
-  - Intended for portfolio demonstration purposes
+- This API is running in a production environment but is not for public use
+- Frontend access is restricted due to CORS origin rules
+- Intended for portfolio demonstration purposes
 
 ## 📚 Learning Points
 
-  - Integrating Minio object storage with Express.js
-  - Implementing Sequelize ORM with PostgreSQL
-  - Designing RESTful API
-  - Containerizing applications with Docker
-  - Securing sesitive files with git-crypt
-  - Handling CORS for API security
-  - Implementing rate limiting
+- Integrating Minio object storage with Express.js
+- Implementing Sequelize ORM with PostgreSQL
+- Designing RESTful API
+- Containerizing applications with Docker
+- Securing sesitive files with git-crypt
+- Handling CORS for API security
+- Implementing rate limiting
 
 ## 🔮 Future Enhancements
 
-  - Implement user authentication
-  - Add more exercise-related endpoints
-  - Enhance error handling and logging
+- Implement user authentication
+- Add more exercise-related endpoints
+- Enhance error handling and logging
 
 ## 📞 Contact
 
-  Rahul Thotapalli - rahulbharadwajthotapalli@gmail.com
-
-  API Link: https://bwapi.lifeinloop.in/api/bodyweight
+API Link: https://bwapi.lifeinloop.in/api/bodyweight
